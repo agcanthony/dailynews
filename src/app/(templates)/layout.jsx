@@ -1,10 +1,13 @@
 'use client'
 
+
 import { createContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import '../assents/css/styles.css';
+import Login from "../models/login";
+
 
 export const MessageCallbackContext = createContext(null);
 const MySwal = withReactContent(Swal);
@@ -32,7 +35,7 @@ export default function Layout({ children }) {
 
     return (
         <>
-            <Navbar fixed="top" bg="transparent" variant="dark" expand="lg">
+            <Navbar className="navbar-Principal" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">Daily News</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -41,9 +44,7 @@ export default function Layout({ children }) {
                                                         
                         </Nav>
                         <Nav>                            
-                            <Nav.Link eventKey={2} href="#memes">
-                            Área Exclusiva
-                            </Nav.Link>
+                            <Login/>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
