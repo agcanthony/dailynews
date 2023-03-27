@@ -1,9 +1,11 @@
+/* eslint-disable react/jsx-no-undef */
 'use client'
 
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../assents/css/styles.css';
+import Input from './input';
 
 function Login() {
   const [show, setShow] = useState(false);
@@ -17,12 +19,12 @@ function Login() {
         Área Exclusiva
       </Button>
 
-      <Offcanvas show={show} onHide={handleClose} backdrop="static" placement="end" style={{ backgroundColor: '#5a40a1' }}>
+      <Offcanvas show={show} onHide={handleClose} backdrop="static" placement="end" style={{ backgroundColor: '#100A80' }}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title style={{ color: '#fff' }}>Login</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body style={{ color: '#fff' }}>
-          Efetue o Login.
+        <Offcanvas.Body style={{ color: '#fff' }}>          
+          <Input />
         </Offcanvas.Body>
       </Offcanvas>
     </>

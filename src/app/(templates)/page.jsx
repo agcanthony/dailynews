@@ -1,7 +1,7 @@
 import CardNoticia from "../models/card"
 
 export const metadata = {
-    title: "Exemplo de CRUD"
+    title: "Daily Newss"
 }
     
 export default function Page() {
