@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-undef */
 'use client'
 
 
 import { createContext } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Card, Col, Container, ListGroup, Nav, Navbar, Row } from "react-bootstrap";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import '../assents/css/styles.css';
@@ -41,10 +42,10 @@ export default function Layout({ children }) {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                                                        
+
                         </Nav>
-                        <Nav>                            
-                            <Login/>
+                        <Nav>
+                            <Login />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -64,7 +65,64 @@ export default function Layout({ children }) {
             <MessageCallbackContext.Provider value={handleMessageCallback}>
                 {children}
             </MessageCallbackContext.Provider>
+            <br />
+            <Card>
+                <Card.Header>Featured</Card.Header>
+                <Card.Body className="justify-content-center">
+                    <Row>
+                        <Col sm={3}>
+                            <ListGroup>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                            </ListGroup>
+                        </Col>
 
+                        <Col sm={3}>
+                            <ListGroup>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                            </ListGroup>
+                        </Col>
+
+                        <Col sm={3}>
+                            <ListGroup>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                                <ListGroup.Item action href="#link2">
+                                    This one is a button
+                                </ListGroup.Item>
+                            </ListGroup>
+                        </Col>
+                    </Row>
+                </Card.Body>
+            </Card>
         </>
     )
 }
