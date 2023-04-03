@@ -3,12 +3,14 @@
 
 
 import { createContext } from "react";
-import { Card, Col, Container, ListGroup, Nav, Navbar, Row } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import '../assents/css/styles.css';
+import '../assents/fontawesome/css/brands.css';
+import '../assents/fontawesome/css/fontawesome.css';
+import '../assents/fontawesome/css/solid.css';
 import Login from "../models/login";
-
 
 export const MessageCallbackContext = createContext(null);
 const MySwal = withReactContent(Swal);
@@ -66,63 +68,11 @@ export default function Layout({ children }) {
                 {children}
             </MessageCallbackContext.Provider>
             <br />
-            <Card>
-                <Card.Header>Featured</Card.Header>
-                <Card.Body className="justify-content-center">
-                    <Row>
-                        <Col sm={3}>
-                            <ListGroup>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                            </ListGroup>
-                        </Col>
-
-                        <Col sm={3}>
-                            <ListGroup>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                            </ListGroup>
-                        </Col>
-
-                        <Col sm={3}>
-                            <ListGroup>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                                <ListGroup.Item action href="#link2">
-                                    This one is a button
-                                </ListGroup.Item>
-                            </ListGroup>
-                        </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
+            <Navbar fixed="bottom" expand="lg" variant="light" bg="light">
+                <Container>
+                    <Navbar.Brand href="#">Navbar</Navbar.Brand>
+                </Container>
+            </Navbar>
         </>
     )
 }
